@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Erina Kibria</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative; 
+  }
+  #section1 {display:flex; flex-direction: column; color: #565656; font-size: 20px; justify-content: center; padding: 80px; background-color: rgb(253, 209, 216);}
+  #section2 {display:flex; flex-direction: column; color: #565656; font-size: 20px; justify-content: center; padding: 80px; background-color: white;}
+  #section3 {display:flex; flex-direction: column; color: #565656; font-size: 20px; justify-content: center; padding: 80px; background-color: rgb(253, 209, 216);}
+  #section4 {display:flex; flex-direction: column; color: #565656; font-size: 20px; justify-content: center; padding: 80px; background-color: white;}
+  
+
+  .projects{
+    display: flex;
+    gap: 50px;
+  }
+
+  .pcard{
+    width: 30%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border: solid;
+    border-color: #565656;
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .pdesc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .resume{
+        width: 20%;
+    }
+
+   .resume button{
+    width: 100%;
+   }
+
+   @media(max-width: 767px){
+    .pcard{
+      width: 50%;
+    }
+
+    .resume button{
+      width: 120%;
+    }
+  }
+
+   @media(max-width: 525px){
+    .pcard{
+      width: 100%;
+    }
+
+        .resume button{
+      width: 170%;
+    }
+
+    #section1, #section2, #section3, #section4{
+      font-size: 15px;
+      padding: 40px;
+    }
+   }
+
+      @media(max-width: 425px){
+
+      .resume button{
+      width: 300%;
+    }
+   }
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Erina Kibria</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#section1">About</a></li>
+          <li><a href="#section2">Projects</a></li>
+          <li><a href="#section3">Experience</a></li>
+          <li><a href="#section4">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+<div id="section1" class="container-fluid">
+  <h3>A bit about myself ...</h3>
+  <br>
+  <p>As I progress through my Bachelor's in Computer Science, I find that the pieces of the puzzle are beginning to fit together. What was once an ambivalent embarkment, has now become somewhat of a second nature. I have grown 
+    to realize the importance of hands-on experience when it comes to fortifying my skills in this discipline, and I'm motivated to pursue just this through traversing various computational concepts and tools in an academic setting, and through personal projects.
+    Outside of my technical pursuits, I enjoy spending time with family, running errands, a nice road trip, and baking from time to time.
+  </p>
+  <br>
+  <p>
+    As you traverse my projects, you will find a plethora of programming languages and techniques utilized, ranging from server-side programming, to object-oriented applications, each examining a different issue. A recent endevour of mine has been to explore the facets of
+    cloud computing, primarily through AWS. Subsequently, you will find a nice selection of web-applications to browse through (eventually).
+  </p>
+
+</div>
+<div id="section2" class="container-fluid">
+    <h3>Projects</h3>
+    <br>
+    <div class="projects">
+        <div class="pcard">
+            <img src="pics/pf.png">
+            <div class="pdesc">
+            <h4>Pixel Fridge</h4>
+            <p>Web-app facilitating food-waste mitigation, via various features such as expiry reports, recipe suggestions, and waste metrics, derived from a user's log history.</p>
+            <p>This application utilizes JavaScript, PHP, HTML, CSS, and MySQL for server-side storage + communications.</p>
+            <a target="_blank" href="https://erinak.me/pixelFridge">Website</a>
+            <a target="_blank" href="https://github.com/erinakibria/pixelFridge">GitHub</a>
+            </div>
+        </div>    
+        <!-- <div class="pcard">
+            <img src="pics/pf.png">
+            <div class="pdesc">
+            <h4>Pixel Fridge</h4>
+            <p>Web-app facilitating food-waste mitigation, via various features such as expiry reports, recipe suggestions, and waste metrics, derived from a user's log history.</p>
+            <p>This application utilizes JavaScript, PHP, HTML, CSS, and MySQL for server-side storage + communications.</p>
+            <a target="_blank" href="https://erinak.me/pixelFridge">Website</a>
+            <a target="_blank" href="https://github.com/erinakibria/pixelFridge">GitHub</a>
+            </div>
+        </div>   
+        <div class="pcard">
+            <img src="pics/pf.png">
+            <div class="pdesc">
+            <h4>Pixel Fridge</h4>
+            <p>Web-app facilitating food-waste mitigation, via various features such as expiry reports, recipe suggestions, and waste metrics, derived from a user's log history.</p>
+            <p>This application utilizes JavaScript, PHP, HTML, CSS, and MySQL for server-side storage + communications.</p>
+            <a target="_blank" href="https://erinak.me/pixelFridge">Website</a>
+            <a target="_blank" href="https://github.com/erinakibria/pixelFridge">GitHub</a>
+            </div>
+        </div>    -->
+    </div>
+</div>
+<div id="section3" class="container-fluid">
+    <h4>*For technicalities pertaining to my education and employment, please see my resume via "Resume" below*</h4>
+    <a target="_blank" href="./ErinaKResume.pdf" class="resume"><button>Resume</button></a>
+    <br>
+    <h3>Education</h3>
+    <p>
+        Thus far in my education, I have had the privilege of traversing various applications of Computer Science including database management systems, operating systems, bioinformatics, and software testing and development.
+        However what stood out to me in each of these pursuits is the necessity for programs to be optimized in terms of their time and space complexities, security concerns, and other factors in lieu of their corresponding use-cases.
+        For instance, paramaterizing SQL queries when working with scripting languages such as PHP to mitigate risks of injections, or utilizing techniques such as dynamic and greedy algorithms for efficiency in larger-scale processing.
+        I have shifted from prioritizing merely functional code, to code that is meaningful to the context (i.e. meets efficiency and security standards), and continue to traverse the various 
+        mechanisms of narrowing down the best approach for a given computational problem. I actively look for opportunities to refine this lens of analyzing problems and developing critical solutions
+        through personal projects and academic pursuits.
+    </p>
+    <br>
+    <h3>Employment</h3>
+    <p>
+     I have found myself building on my critical thinking and problem solving skills at each of my positions to date, regardless of their varying technical aspects.
+     From devising the best path of solution in response to customer concerns, to strategizing a learning plan for students based on exhibited strengths, I find myself in a consistent state of analysis and subsequent action.
+     Additionally, the wide range of environments and constraints in which these skills are exercised has equipped me with a resilient work-ethic, carefully curated to prosper in unique environments. 
+     Upon further reflection, I would conclude that my willingness to deliver meaningful solutions, even in non-technical environments, has reinforced my ability to curate efficient solutions in the computational scene.
+     Positive consequences such as these motivate me to traverse a wide range of problems that require keenness in critical reasoning. I strive to pursue just this in my current position, and continue to refine these skills over the course of my technical career.
+    </p>
+    <br>
+    <h3>Technical Competencies</h3>
+    <ul>
+        <li>Java</li>
+        <li>C</li>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML/CSS</li>
+        <li>PHP</li>
+        <li>MySQL</li>
+    </ul>
+</div>
+<div id="section4" class="container-fluid">
+    <h3>Contact me</h3>
+    <br>
+    <a href="mailto:erinakibria@gmail.com">Email (erinakibria@gmail.com)</a>
+    <a target="_blank" href="https://github.com/erinakibria">
+      GitHub (erinakibria)
+    </a>
+    <a target="_blank" href="https://www.linkedin.com/in/erinakibria">
+        LinkedIn
+      </a>
+</div>
+</body>
+</html>
