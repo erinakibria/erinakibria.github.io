@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Erina Kibria</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    position: relative; 
+  }
+  #section1 {display:flex; flex-direction: column; color: #565656; font-size: 18px; justify-content: center; padding: 80px; background-color: rgb(219,219,219);}
+
+  .projects{
+    display: flex;
+    gap: 50px;
+  }
+
+  .pcard{
+    width: 30%;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    border: solid;
+    border-color: #565656;
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  .pdesc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .resume{
+        width: 20%;
+    }
+
+   .resume button{
+    width: 100%;
+   }
+
+   @media(max-width: 767px){
+    .pcard{
+      width: 50%;
+    }
+
+    .resume button{
+      width: 120%;
+    }
+  }
+
+   @media(max-width: 525px){
+    .pcard{
+      width: 100%;
+    }
+
+        .resume button{
+      width: 170%;
+    }
+
+    #section1, #section2, #section3, #section4{
+      font-size: 15px;
+      padding: 40px;
+    }
+   }
+
+      @media(max-width: 425px){
+
+      .resume button{
+      width: 300%;
+    }
+   }
+
+   .gif{
+    width: 50%;
+   }
+
+  img {
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+  }
+
+  </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Erina Kibria</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html#section1">About</a></li>
+          <li><a href="index.html#section2">Projects</a></li>
+          <li><a href="index.html#section3">Experience</a></li>
+          <li><a href="index.html#section4">Contact</a></li>
+          <li><a href="pf.html">Demos</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+<div id="section1" class="container-fluid">
+  <h3>Pixel Fridge</h3>
+  <br>
+  <p>This web-application aims to make fridge inventory accessible to users, facilitating thoughtful choices when grocery shopping, ultimately reducing food waste long-term. </p>
+  <p>Moreover, the efficient display of information and metrics is crucial in making this a practical and meaningful solution to combating food waste.</p>
+  <p>I opted for a minimalistic design to optimize user-friendliness, while utilizing icons, colours, and interactive features to maintain navigability, while providing comprehensive and insightful metrics. </p>
+  <br>
+
+  <h4>Signing in</h4>
+  <br>
+  <img class="gif" src="pics/demo/pf_login.gif" alt="Signing into an account and viewing inventory." />
+  <br>
+  <p>Users log on with the email and password used at registration. Appropriate error messages are displayed on failure. On login, users can view item inventory, log information, and visual cues communicating remaining item life.</p>
+  <p>JWT authentication is handled server-side via Supabase. A new session is started upon login.</p>
+  <br>
+
+  <h4>Adding items</h4>
+  <br>
+  <img class="gif" src="pics/demo/pf_add.gif" alt="Searching for an item and logging it in the user's inventory." />
+  <br>
+  <p>To add items, users can navigate to the right panel. The grid populates as a search term is given.</p>
+  <p>Users are prompted to enter additional log information, such as quantity and manufacture date. An expiration date can be manually set here.</p>
+  <p>Optionally, a "freshness" assesment can be given as a value from 1 to 10. This is based on the user's observation of the item. Default metrics are calculated assuming a freshness of 10, so earlier expiration dates may be suggested if changed.</p>
+  <br>
+
+  <h4>Updating and removal</h4>
+  <br>
+  <img class="gif" src="pics/demo/pf_out.gif" alt="Marking an item as 'Out of Stock'" />
+  <br>
+  <p>The "Ran out" feature allows users to keep track of items to restock.</p>
+  <br>
+  <img class="gif" src="pics/demo/pf_clr.gif" alt="Clearing out items based on status." />
+  <br>
+  <p>Items can be removed individually, or cleared based on status.</p>
+  <p>Removed items are recorded in a user's history for reporting.</p>
+  <br>
+
+  <h4>Reports</h4>
+  <br>
+  <img class="gif" src="pics/demo/pf_rep15.gif" alt="Visualizing expired and expiring items." />
+  <br>
+  <p>Visual cues conveniently indicate items in each report category.</p>
+  <br>
+  <img class="gif" src="pics/demo/pf_rep3.gif" alt="Recipes generated from inventory." />
+  <br>
+  <p>A third-party API compiles recipes using items in the user's inventory.</p>
+  <p>Items that are expired or out of stock are not included.</p>
+  <br>
+
+  <h4>User history</h4>
+  <br>
+  <img class="gif" src="pics/demo/pf_hist.gif" alt="Navigating waste metric charts." />
+  <br>
+  <p>Waste metrics are calculated based on historical data, and compiled into visuals for user convenience.</p>
+  <p>For instance, the first histogram depicts waste trends for the months of the current year. The last bar graph depicts the top 5 items which were wasted in the current year.</p>
+  <p>Metrics are geared towards helping users make waste-concious decisions when cooking or shopping.</p>
+  <br>
+
+  <h4>Sorting items</h4>
+  <br>
+  <img class="gif" src="pics/demo/pf_sort.gif" alt="Changing sort option to reorganize item display." />
+  <br>
+  <p>Sorting can be done by remaining fridge life, or log date. Stored in local storage for convenience.</p>
+  <br>
+
+  <h4>New users</h4>
+  <br>
+  <img class="gif" src="pics/demo/pf_new.gif" alt="Creating an account." />
+  <br>
+  <p>Error messages are displayed on failure. Users are automatically logged in and authenticated upon creating the account.</p>
+
+</div>
+</body>
+</html>
